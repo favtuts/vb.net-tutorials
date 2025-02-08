@@ -121,3 +121,4 @@ MessageBox.Show(StrBrand & " " & StrModel & " " & IntBattery & " " & _
 
 We are going to create a form to get input data for First Name, Last Name, Email
 
+![Demo-Input-TextBox](./images/VB.NET8-08-demo-input-textbox-show-message.png)
