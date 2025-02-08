@@ -62,3 +62,25 @@ The folder "My Project" is required for the execution of the project
 
 # Lesson 4: Variable in Visual Basic
 
+Create new project:
+* Project name: VariableUnderstanding
+* Solution name: VariableUnderstandingSolution
+
+![Create-Variable-Understanding-Project](./images/VB.NET8-06-create-variable-understanding-project.png)
+
+To declare a variable using keyword `Dim` (stands for Dimension). Dimension means we are saying in the memory you should hold this variable temporarily with certain data. Visual Basic is going to take care of that entirely you don't have to worry how the memory functions behind the scene. All you need to now `Dim` is the keyword to declare a variable with the specific type example String.
+```vb
+Dim FirstName As String
+```
+
+Next, we are going to assign some value to this variable:
+```vb
+FirstName = "Shane"
+```
+
+Now we will use this value to show the message:
+```vb
+MessageBox.Show("Good morning " & FirstName & ". How are you?")
+```
+
+![Good_Morning_Shane](./images/VB.NET8-07-demo-variable-string-concatenation.png)
