@@ -122,3 +122,10 @@ MessageBox.Show(StrBrand & " " & StrModel & " " & IntBattery & " " & _
 We are going to create a form to get input data for First Name, Last Name, Email
 
 ![Demo-Input-TextBox](./images/VB.NET8-08-demo-input-textbox-show-message.png)
+
+
+# Lesson 7: List Box
+
+We are using ListBox to store the selected games he want to play
+
+![Demo-ListBox](./images/VB.NET8-09-demo-listbox-selected-games.png)
