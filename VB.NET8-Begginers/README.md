@@ -25,3 +25,20 @@ Choosing Target Framework:
 * .Net 8.0 (Long Term Support)
 
 ![Choosing-NET8-LTS](./images/VB.NET8-03-choosing-target-framework-NET8-LTS.png)
+
+Click on the Create button, the VS will create the project for you.
+
+The folder "My Project" is required for the execution of the project
+
+
+# Show the Message when click a button
+* Drag a button on the form
+    * Text = Click Me
+    * Name = btn_ShowMsg
+* Double click on the buton it will generate the click event code
+    * Click event = btn_ShowMsg_Click
+    * Print the message: "hello world"
+
+![Demo-MsgBox-Helloworld](./images/VB.NET8-04-demo-msgbox-helloworld.png)
+
+

@@ -22,10 +22,30 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Text = "Form1"
+        btn_ShowMsg = New Button()
+        SuspendLayout()
+        ' 
+        ' btn_ShowMsg
+        ' 
+        btn_ShowMsg.BackColor = Color.MediumSlateBlue
+        btn_ShowMsg.Location = New Point(298, 187)
+        btn_ShowMsg.Name = "btn_ShowMsg"
+        btn_ShowMsg.Size = New Size(182, 83)
+        btn_ShowMsg.TabIndex = 0
+        btn_ShowMsg.Text = "Click Me"
+        btn_ShowMsg.UseVisualStyleBackColor = False
+        ' 
+        ' Form1
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(800, 450)
+        Controls.Add(btn_ShowMsg)
+        Name = "Form1"
+        Text = "Form1"
+        ResumeLayout(False)
     End Sub
+
+    Friend WithEvents btn_ShowMsg As Button
 
 End Class
