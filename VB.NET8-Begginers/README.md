@@ -115,3 +115,9 @@ BoolAvailability = True
 MessageBox.Show(StrBrand & " " & StrModel & " " & IntBattery & " " & _
                 DoubScreenSize & " " & DecPrice & " " & BoolAvailability)
 ```
+
+
+# Lesson 6: Input Box
+
+We are going to create a form to get input data for First Name, Last Name, Email
+
