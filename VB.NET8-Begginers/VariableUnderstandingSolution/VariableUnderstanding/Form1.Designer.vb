@@ -23,22 +23,33 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         BtnVariable = New Button()
+        BtnIPhone16Properties = New Button()
         SuspendLayout()
         ' 
         ' BtnVariable
         ' 
-        BtnVariable.Location = New Point(295, 164)
+        BtnVariable.Location = New Point(276, 93)
         BtnVariable.Name = "BtnVariable"
         BtnVariable.Size = New Size(185, 79)
         BtnVariable.TabIndex = 0
         BtnVariable.Text = "Variable Demo"
         BtnVariable.UseVisualStyleBackColor = True
         ' 
+        ' BtnIPhone16Properties
+        ' 
+        BtnIPhone16Properties.Location = New Point(276, 224)
+        BtnIPhone16Properties.Name = "BtnIPhone16Properties"
+        BtnIPhone16Properties.Size = New Size(185, 88)
+        BtnIPhone16Properties.TabIndex = 1
+        BtnIPhone16Properties.Text = "iPhone 16 Properties"
+        BtnIPhone16Properties.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(BtnIPhone16Properties)
         Controls.Add(BtnVariable)
         Name = "Form1"
         Text = "Form1"
@@ -46,5 +57,6 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents BtnVariable As Button
+    Friend WithEvents BtnIPhone16Properties As Button
 
 End Class

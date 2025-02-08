@@ -84,3 +84,34 @@ MessageBox.Show("Good morning " & FirstName & ". How are you?")
 ```
 
 ![Good_Morning_Shane](./images/VB.NET8-07-demo-variable-string-concatenation.png)
+
+
+# Lesson 5: Data Types
+
+We have the properties of iPhone with different data types:
+    * Brand = Apple (String)
+    * Model = iPhone 16 (String)
+    * Battery = 4500 (Integer)
+    * ScreenSize = 6.7 (Double)
+    * Price = $799.99 (Decimal)
+    * Availability = True (Boolean)
+
+Use the ampersands symbol (`_`) before the variable to break line of it is too long
+```vb
+Dim StrBrand As String
+Dim StrModel As String
+Dim IntBattery As Integer
+Dim DoubScreenSize As Double    '15->16 Digits
+Dim DecPrice As Decimal         '28->29 Digits Higher Precision
+Dim BoolAvailability As Boolean
+
+StrBrand = "Apple"
+StrModel = "iPhone 16"
+IntBattery = 4500
+DoubScreenSize = 6.7
+DecPrice = 799.99
+BoolAvailability = True
+
+MessageBox.Show(StrBrand & " " & StrModel & " " & IntBattery & " " & _
+                DoubScreenSize & " " & DecPrice & " " & BoolAvailability)
+```
