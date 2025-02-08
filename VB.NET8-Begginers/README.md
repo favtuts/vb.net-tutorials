@@ -1,7 +1,7 @@
 # VB.NET – Full Course for Beginners
 * https://youtu.be/7Y4PD8I83g0?si=JUZDOtbjEKhbseQl
 
-# Create First project with Visual Studio
+# Lesson 1: Create First project with Visual Studio
 
 Search For templates...:
 * Open Visual Studio -> Get Started with The last item "Create a new project"
@@ -31,7 +31,7 @@ Click on the Create button, the VS will create the project for you.
 The folder "My Project" is required for the execution of the project
 
 
-# Show the Message when click a button
+# Lesson 2: Show the Message when click a button
 * Drag a button on the form
     * Text = Click Me
     * Name = btn_ShowMsg
@@ -41,4 +41,24 @@ The folder "My Project" is required for the execution of the project
 
 ![Demo-MsgBox-Helloworld](./images/VB.NET8-04-demo-msgbox-helloworld.png)
 
+
+# Lesson 3: Learn useful tools and options in Visual Studio
+
+* Goto Menu Tools -> Options
+* Change the VS Theme: Environment -> General -> Color Theme: Blue
+* Change the VS Font Color: Environment -> General -> Fonts and Colors: Cascadia Mono
+    Click on UseDefaults button to reset to the default settings
+* Change line numbers on the code editor: Text Editor -> All languages -> Tick on Line Numbers
+
+![Disable-Line-Numbers](./images/VB.NET8-05-demo-enable-code-line-numbers.png)
+
+* Change the default project locations: Projects and Solutions -> Locations
+    * Current Location: C:\Users\thuan\source\repos
+    * You can change this to the new default location for containing new projects
+
+* Show/Hide the Tool Box: Goto Menu View -> Toolbox
+* Right click on the controls to show the Properties
+
+
+# Lesson 4: Variable in Visual Basic
 
