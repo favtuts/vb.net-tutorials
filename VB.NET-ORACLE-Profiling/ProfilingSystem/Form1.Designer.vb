@@ -1,10 +1,10 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class frmMain
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
-    Protected Overrides Sub Dispose(disposing As Boolean)
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
                 components.Dispose()
@@ -20,9 +20,9 @@ Partial Class frmMain
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        GroupBox1 = New GroupBox()
+        txtCourse = New TextBox()
         txtAddress = New TextBox()
         Label7 = New Label()
         txtContactNum = New TextBox()
@@ -33,57 +33,40 @@ Partial Class frmMain
         Label4 = New Label()
         rdbFemale = New RadioButton()
         rdbMale = New RadioButton()
+        btnLoad = New Button()
+        btnClear = New Button()
+        btnDelete = New Button()
+        btnUpdate = New Button()
+        btnSave = New Button()
         txtMiddleName = New TextBox()
         txtFirstName = New TextBox()
         txtLastName = New TextBox()
         Label3 = New Label()
+        Label8 = New Label()
         Label2 = New Label()
+        lblTotal = New Label()
         Label1 = New Label()
-        GroupBox2 = New GroupBox()
         txtSchoolAddress = New TextBox()
         Label11 = New Label()
         cbYear = New ComboBox()
         Label10 = New Label()
         cbSection = New ComboBox()
-        Label9 = New Label()
-        txtCourse = New TextBox()
-        Label8 = New Label()
-        btnSave = New Button()
-        btnUpdate = New Button()
-        btnDelete = New Button()
-        btnClear = New Button()
-        btnLoad = New Button()
         DataGridView1 = New DataGridView()
-        lblTotal = New Label()
-        GroupBox1.SuspendLayout()
-        GroupBox2.SuspendLayout()
+        GroupBox2 = New GroupBox()
+        Label9 = New Label()
+        GroupBox1 = New GroupBox()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        GroupBox2.SuspendLayout()
+        GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
-        ' GroupBox1
+        ' txtCourse
         ' 
-        GroupBox1.Controls.Add(txtAddress)
-        GroupBox1.Controls.Add(Label7)
-        GroupBox1.Controls.Add(txtContactNum)
-        GroupBox1.Controls.Add(Label6)
-        GroupBox1.Controls.Add(txtAge)
-        GroupBox1.Controls.Add(Label5)
-        GroupBox1.Controls.Add(dtpBirthday)
-        GroupBox1.Controls.Add(Label4)
-        GroupBox1.Controls.Add(rdbFemale)
-        GroupBox1.Controls.Add(rdbMale)
-        GroupBox1.Controls.Add(txtMiddleName)
-        GroupBox1.Controls.Add(txtFirstName)
-        GroupBox1.Controls.Add(txtLastName)
-        GroupBox1.Controls.Add(Label3)
-        GroupBox1.Controls.Add(Label2)
-        GroupBox1.Controls.Add(Label1)
-        GroupBox1.Location = New Point(12, 12)
-        GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(566, 382)
-        GroupBox1.TabIndex = 0
-        GroupBox1.TabStop = False
-        GroupBox1.Text = "Personal Information"
+        txtCourse.Location = New Point(32, 59)
+        txtCourse.Name = "txtCourse"
+        txtCourse.ReadOnly = True
+        txtCourse.Size = New Size(334, 27)
+        txtCourse.TabIndex = 17
         ' 
         ' txtAddress
         ' 
@@ -177,6 +160,51 @@ Partial Class frmMain
         rdbMale.Text = "Male"
         rdbMale.UseVisualStyleBackColor = True
         ' 
+        ' btnLoad
+        ' 
+        btnLoad.Location = New Point(619, 17)
+        btnLoad.Name = "btnLoad"
+        btnLoad.Size = New Size(105, 38)
+        btnLoad.TabIndex = 29
+        btnLoad.Text = "Load Data"
+        btnLoad.UseVisualStyleBackColor = True
+        ' 
+        ' btnClear
+        ' 
+        btnClear.Location = New Point(413, 689)
+        btnClear.Name = "btnClear"
+        btnClear.Size = New Size(105, 38)
+        btnClear.TabIndex = 28
+        btnClear.Text = "Clear"
+        btnClear.UseVisualStyleBackColor = True
+        ' 
+        ' btnDelete
+        ' 
+        btnDelete.Location = New Point(286, 689)
+        btnDelete.Name = "btnDelete"
+        btnDelete.Size = New Size(105, 38)
+        btnDelete.TabIndex = 27
+        btnDelete.Text = "Delete"
+        btnDelete.UseVisualStyleBackColor = True
+        ' 
+        ' btnUpdate
+        ' 
+        btnUpdate.Location = New Point(160, 689)
+        btnUpdate.Name = "btnUpdate"
+        btnUpdate.Size = New Size(105, 38)
+        btnUpdate.TabIndex = 26
+        btnUpdate.Text = "Update"
+        btnUpdate.UseVisualStyleBackColor = True
+        ' 
+        ' btnSave
+        ' 
+        btnSave.Location = New Point(40, 689)
+        btnSave.Name = "btnSave"
+        btnSave.Size = New Size(105, 38)
+        btnSave.TabIndex = 25
+        btnSave.Text = "Save"
+        btnSave.UseVisualStyleBackColor = True
+        ' 
         ' txtMiddleName
         ' 
         txtMiddleName.Location = New Point(365, 68)
@@ -207,6 +235,15 @@ Partial Class frmMain
         Label3.TabIndex = 2
         Label3.Text = "Middle Name"
         ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Location = New Point(28, 36)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(57, 20)
+        Label8.TabIndex = 16
+        Label8.Text = "Course:"
+        ' 
         ' Label2
         ' 
         Label2.AutoSize = True
@@ -216,6 +253,15 @@ Partial Class frmMain
         Label2.TabIndex = 1
         Label2.Text = "First Name"
         ' 
+        ' lblTotal
+        ' 
+        lblTotal.AutoSize = True
+        lblTotal.Location = New Point(623, 645)
+        lblTotal.Name = "lblTotal"
+        lblTotal.Size = New Size(53, 20)
+        lblTotal.TabIndex = 31
+        lblTotal.Text = "Total:0"
+        ' 
         ' Label1
         ' 
         Label1.AutoSize = True
@@ -224,23 +270,6 @@ Partial Class frmMain
         Label1.Size = New Size(79, 20)
         Label1.TabIndex = 0
         Label1.Text = "Last Name"
-        ' 
-        ' GroupBox2
-        ' 
-        GroupBox2.Controls.Add(txtSchoolAddress)
-        GroupBox2.Controls.Add(Label11)
-        GroupBox2.Controls.Add(cbYear)
-        GroupBox2.Controls.Add(Label10)
-        GroupBox2.Controls.Add(cbSection)
-        GroupBox2.Controls.Add(Label9)
-        GroupBox2.Controls.Add(txtCourse)
-        GroupBox2.Controls.Add(Label8)
-        GroupBox2.Location = New Point(14, 417)
-        GroupBox2.Name = "GroupBox2"
-        GroupBox2.Size = New Size(566, 264)
-        GroupBox2.TabIndex = 1
-        GroupBox2.TabStop = False
-        GroupBox2.Text = "School Information"
         ' 
         ' txtSchoolAddress
         ' 
@@ -287,6 +316,36 @@ Partial Class frmMain
         cbSection.Size = New Size(151, 28)
         cbSection.TabIndex = 19
         ' 
+        ' DataGridView1
+        ' 
+        DataGridView1.AllowUserToAddRows = False
+        DataGridView1.AllowUserToDeleteRows = False
+        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView1.Location = New Point(623, 71)
+        DataGridView1.Name = "DataGridView1"
+        DataGridView1.ReadOnly = True
+        DataGridView1.RowHeadersWidth = 51
+        DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        DataGridView1.Size = New Size(519, 555)
+        DataGridView1.TabIndex = 30
+        ' 
+        ' GroupBox2
+        ' 
+        GroupBox2.Controls.Add(txtSchoolAddress)
+        GroupBox2.Controls.Add(Label11)
+        GroupBox2.Controls.Add(cbYear)
+        GroupBox2.Controls.Add(Label10)
+        GroupBox2.Controls.Add(cbSection)
+        GroupBox2.Controls.Add(Label9)
+        GroupBox2.Controls.Add(txtCourse)
+        GroupBox2.Controls.Add(Label8)
+        GroupBox2.Location = New Point(16, 410)
+        GroupBox2.Name = "GroupBox2"
+        GroupBox2.Size = New Size(566, 264)
+        GroupBox2.TabIndex = 24
+        GroupBox2.TabStop = False
+        GroupBox2.Text = "School Information"
+        ' 
         ' Label9
         ' 
         Label9.AutoSize = True
@@ -296,147 +355,88 @@ Partial Class frmMain
         Label9.TabIndex = 18
         Label9.Text = "Section:"
         ' 
-        ' txtCourse
+        ' GroupBox1
         ' 
-        txtCourse.Location = New Point(32, 59)
-        txtCourse.Name = "txtCourse"
-        txtCourse.ReadOnly = True
-        txtCourse.Size = New Size(334, 27)
-        txtCourse.TabIndex = 17
+        GroupBox1.Controls.Add(txtAddress)
+        GroupBox1.Controls.Add(Label7)
+        GroupBox1.Controls.Add(txtContactNum)
+        GroupBox1.Controls.Add(Label6)
+        GroupBox1.Controls.Add(txtAge)
+        GroupBox1.Controls.Add(Label5)
+        GroupBox1.Controls.Add(dtpBirthday)
+        GroupBox1.Controls.Add(Label4)
+        GroupBox1.Controls.Add(rdbFemale)
+        GroupBox1.Controls.Add(rdbMale)
+        GroupBox1.Controls.Add(txtMiddleName)
+        GroupBox1.Controls.Add(txtFirstName)
+        GroupBox1.Controls.Add(txtLastName)
+        GroupBox1.Controls.Add(Label3)
+        GroupBox1.Controls.Add(Label2)
+        GroupBox1.Controls.Add(Label1)
+        GroupBox1.Location = New Point(14, 5)
+        GroupBox1.Name = "GroupBox1"
+        GroupBox1.Size = New Size(566, 382)
+        GroupBox1.TabIndex = 23
+        GroupBox1.TabStop = False
+        GroupBox1.Text = "Personal Information"
         ' 
-        ' Label8
-        ' 
-        Label8.AutoSize = True
-        Label8.Location = New Point(28, 36)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(57, 20)
-        Label8.TabIndex = 16
-        Label8.Text = "Course:"
-        ' 
-        ' btnSave
-        ' 
-        btnSave.Location = New Point(38, 696)
-        btnSave.Name = "btnSave"
-        btnSave.Size = New Size(105, 38)
-        btnSave.TabIndex = 2
-        btnSave.Text = "Save"
-        btnSave.UseVisualStyleBackColor = True
-        ' 
-        ' btnUpdate
-        ' 
-        btnUpdate.Location = New Point(158, 696)
-        btnUpdate.Name = "btnUpdate"
-        btnUpdate.Size = New Size(105, 38)
-        btnUpdate.TabIndex = 3
-        btnUpdate.Text = "Update"
-        btnUpdate.UseVisualStyleBackColor = True
-        ' 
-        ' btnDelete
-        ' 
-        btnDelete.Location = New Point(284, 696)
-        btnDelete.Name = "btnDelete"
-        btnDelete.Size = New Size(105, 38)
-        btnDelete.TabIndex = 4
-        btnDelete.Text = "Delete"
-        btnDelete.UseVisualStyleBackColor = True
-        ' 
-        ' btnClear
-        ' 
-        btnClear.Location = New Point(411, 696)
-        btnClear.Name = "btnClear"
-        btnClear.Size = New Size(105, 38)
-        btnClear.TabIndex = 5
-        btnClear.Text = "Clear"
-        btnClear.UseVisualStyleBackColor = True
-        ' 
-        ' btnLoad
-        ' 
-        btnLoad.Location = New Point(617, 24)
-        btnLoad.Name = "btnLoad"
-        btnLoad.Size = New Size(105, 38)
-        btnLoad.TabIndex = 6
-        btnLoad.Text = "Load Data"
-        btnLoad.UseVisualStyleBackColor = True
-        ' 
-        ' DataGridView1
-        ' 
-        DataGridView1.AllowUserToAddRows = False
-        DataGridView1.AllowUserToDeleteRows = False
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(621, 78)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.ReadOnly = True
-        DataGridView1.RowHeadersWidth = 51
-        DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        DataGridView1.Size = New Size(519, 555)
-        DataGridView1.TabIndex = 7
-        ' 
-        ' lblTotal
-        ' 
-        lblTotal.AutoSize = True
-        lblTotal.Location = New Point(621, 652)
-        lblTotal.Name = "lblTotal"
-        lblTotal.Size = New Size(53, 20)
-        lblTotal.TabIndex = 22
-        lblTotal.Text = "Total:0"
-        ' 
-        ' frmMain
+        ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1166, 754)
-        Controls.Add(lblTotal)
-        Controls.Add(DataGridView1)
+        ClientSize = New Size(1156, 732)
         Controls.Add(btnLoad)
         Controls.Add(btnClear)
         Controls.Add(btnDelete)
         Controls.Add(btnUpdate)
         Controls.Add(btnSave)
+        Controls.Add(lblTotal)
+        Controls.Add(DataGridView1)
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
-        Name = "frmMain"
+        Name = "Form1"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Profiling System"
-        GroupBox1.ResumeLayout(False)
-        GroupBox1.PerformLayout()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         GroupBox2.ResumeLayout(False)
         GroupBox2.PerformLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        GroupBox1.ResumeLayout(False)
+        GroupBox1.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents rdbFemale As RadioButton
-    Friend WithEvents rdbMale As RadioButton
-    Friend WithEvents txtMiddleName As TextBox
-    Friend WithEvents txtFirstName As TextBox
-    Friend WithEvents txtLastName As TextBox
-    Friend WithEvents txtAge As TextBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents dtpBirthday As DateTimePicker
-    Friend WithEvents Label4 As Label
+    Friend WithEvents txtCourse As TextBox
     Friend WithEvents txtAddress As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents txtContactNum As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents txtCourse As TextBox
+    Friend WithEvents txtAge As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents dtpBirthday As DateTimePicker
+    Friend WithEvents Label4 As Label
+    Friend WithEvents rdbFemale As RadioButton
+    Friend WithEvents rdbMale As RadioButton
+    Friend WithEvents btnLoad As Button
+    Friend WithEvents btnClear As Button
+    Friend WithEvents btnDelete As Button
+    Friend WithEvents btnUpdate As Button
+    Friend WithEvents btnSave As Button
+    Friend WithEvents txtMiddleName As TextBox
+    Friend WithEvents txtFirstName As TextBox
+    Friend WithEvents txtLastName As TextBox
+    Friend WithEvents Label3 As Label
     Friend WithEvents Label8 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents lblTotal As Label
+    Friend WithEvents Label1 As Label
     Friend WithEvents txtSchoolAddress As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents cbYear As ComboBox
     Friend WithEvents Label10 As Label
     Friend WithEvents cbSection As ComboBox
-    Friend WithEvents Label9 As Label
-    Friend WithEvents btnSave As Button
-    Friend WithEvents btnUpdate As Button
-    Friend WithEvents btnDelete As Button
-    Friend WithEvents btnClear As Button
-    Friend WithEvents btnLoad As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents lblTotal As Label
-
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents GroupBox1 As GroupBox
 End Class
