@@ -3,7 +3,7 @@ Imports Windows.Win32.System
 
 Module SystemModule
     Property ConnString As String = "User Id=USERDB;Password=PASSWORD;Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=XEPDB1)));"
-
+    Property StudentId As Int64
     Public Function TestDatabaseConnection() As ReturnResult
         Dim result = New ReturnResult()
 
@@ -102,6 +102,77 @@ Module SystemModule
         Catch ex As Exception
             Throw
         End Try
+    End Function
+
+    ''' <summary>
+    ''' Update Student Record
+    ''' </summary>
+    ''' <returns></returns>
+    Public Function UpdateStudentInfo(ByVal student As StudentInfo) As Boolean
+        Dim query = "UPDATE StudentInfo  SET LastName=:LastName,FirstName=:FirstName,MiddleName=:MiddleName,Gender=:Gender,Birthday=:Birthday,ContactNumber=:ContactNum,Address=:Address,Course=:Course,Year=:Year,Section=:Section,SchoolAddress=:SchoolAddress,Created=:Created WHERE Id=:Id"
+        Try
+
+            '1. Initialize the SqlConnection string
+            Using con = New OracleConnection(ConnString)
+                '2. Initialize the SqlCommand
+                Using cmd = New OracleCommand(query, con)
+                    '3. Create Command Parameter to avoid sql injection
+                    cmd.Parameters.Add(New OracleParameter("LastName", student.LastName))
+                    cmd.Parameters.Add(New OracleParameter("FirstName", student.FirstName))
+                    cmd.Parameters.Add(New OracleParameter("MiddleName", student.MiddleName))
+                    cmd.Parameters.Add(New OracleParameter("Gender", student.Gender))
+                    cmd.Parameters.Add(New OracleParameter("Birthday", student.Birthday))
+                    cmd.Parameters.Add(New OracleParameter("ContactNum", student.ContactNum))
+                    cmd.Parameters.Add(New OracleParameter("Address", student.Address))
+                    cmd.Parameters.Add(New OracleParameter("Course", student.Course))
+                    cmd.Parameters.Add(New OracleParameter("Year", student.Year))
+                    cmd.Parameters.Add(New OracleParameter("Section", student.Section))
+                    cmd.Parameters.Add(New OracleParameter("SchoolAddress", student.SchoolAddress))
+                    cmd.Parameters.Add(New OracleParameter("Created", student.Created))
+                    cmd.Parameters.Add(New OracleParameter("Id", student.Id))
+                    '4. open the connection
+                    con.Open()
+                    'Execute non query to insert data
+                    cmd.ExecuteNonQuery()
+                    Return True ' if successfully save in database
+                End Using
+            End Using
+
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+    End Function
+
+
+    ''' <summary>
+    ''' Delete Student Record
+    ''' </summary>
+    ''' <param name="student"></param>
+    ''' <returns></returns>
+    Public Function DeleteStudentInfo(ByVal student As StudentInfo) As Boolean
+        Dim query = "DELETE FROM StudentInfo WHERE Id=:Id"
+        Try
+
+            '1. Initialize the SqlConnection string
+            Using con = New OracleConnection(ConnString)
+                '2. Initialize the SqlCommand
+                Using cmd = New OracleCommand(query, con)
+                    '3. Create Command Parameter to avoid sql injection
+                    cmd.Parameters.Add(New OracleParameter(":Id", student.Id))
+                    '4. open the connection
+                    con.Open()
+                    'Execute non query to insert data
+                    cmd.ExecuteNonQuery()
+                    Return True ' if successfully save in database
+                End Using
+            End Using
+
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+        Return False
     End Function
 
 End Module

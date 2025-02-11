@@ -64,7 +64,6 @@ Partial Class Form1
         ' 
         txtCourse.Location = New Point(32, 59)
         txtCourse.Name = "txtCourse"
-        txtCourse.ReadOnly = True
         txtCourse.Size = New Size(334, 27)
         txtCourse.TabIndex = 17
         ' 
@@ -73,7 +72,6 @@ Partial Class Form1
         txtAddress.Location = New Point(34, 330)
         txtAddress.Multiline = True
         txtAddress.Name = "txtAddress"
-        txtAddress.ReadOnly = True
         txtAddress.Size = New Size(456, 27)
         txtAddress.TabIndex = 15
         ' 
@@ -90,7 +88,6 @@ Partial Class Form1
         ' 
         txtContactNum.Location = New Point(34, 255)
         txtContactNum.Name = "txtContactNum"
-        txtContactNum.ReadOnly = True
         txtContactNum.Size = New Size(246, 27)
         txtContactNum.TabIndex = 13
         ' 
@@ -276,7 +273,6 @@ Partial Class Form1
         txtSchoolAddress.Location = New Point(28, 219)
         txtSchoolAddress.Multiline = True
         txtSchoolAddress.Name = "txtSchoolAddress"
-        txtSchoolAddress.ReadOnly = True
         txtSchoolAddress.Size = New Size(456, 27)
         txtSchoolAddress.TabIndex = 17
         ' 
