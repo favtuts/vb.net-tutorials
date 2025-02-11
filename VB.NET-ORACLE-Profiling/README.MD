@@ -56,3 +56,62 @@ BEGIN
 END;
 /
 ```
+
+# Installing Oracle Data Provider for .NET
+
+Oracle Data Provider for .NET (ODP.NET) : A library for connecting Oracle databases to .NET applications.
+
+ODP.NET can be installed using the NuGet Package Manager. Follow the steps below to install it:
+* Open your project in Visual Studio.
+* Right-click on the project in Solution Explorer and select Manage NuGet Packages.
+* In the Browse tab, search for "Oracle.ManagedDataAccess" and install it.
+    - Oracle.ManagedDataAccess: For .NET Framework
+    - Oracle.ManagedDataAccess.Core: For .NET 
+* This project is using .NET 8.0 LTS, then need install `Oracle.ManagedDataAccess.Core` package
+
+![Intall_ODP_Core](./images/PS-02-install-ODP.NET-Nuget.png)
+
+![Intall_ODP_Core](./images/PS-03-install-ODP.NET-Nuget.png)
+
+```
+Installing NuGet package Oracle.ManagedDataAccess.Core 23.7.0.
+Writing assets file to disk. Path: C:\Develop\VB.NET\vb.net-tutorials\VB.NET-ORACLE-Profiling\ProfilingSystem\obj\project.assets.json
+Successfully installed 'Oracle.ManagedDataAccess.Core 23.7.0' to ProfilingSystem
+Successfully installed 'System.Configuration.ConfigurationManager 8.0.0' to ProfilingSystem
+Successfully installed 'System.Diagnostics.EventLog 8.0.0' to ProfilingSystem
+Successfully installed 'System.Diagnostics.PerformanceCounter 8.0.0' to ProfilingSystem
+Successfully installed 'System.DirectoryServices.Protocols 8.0.0' to ProfilingSystem
+Successfully installed 'System.Formats.Asn1 8.0.1' to ProfilingSystem
+Successfully installed 'System.Security.Cryptography.Pkcs 8.0.0' to ProfilingSystem
+Successfully installed 'System.Security.Cryptography.ProtectedData 8.0.0' to ProfilingSystem
+```
+
+
+# Configuring the Connection String
+
+To connect to an Oracle database, you must properly construct a connection string, which includes the database host name, port number, service name, username, and password.
+```vb
+Dim connectionString As String = "User Id=username;Password=password;Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=hostname)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=servicename)));"
+```
+
+In this example, replace username, password, hostname, and with your actual database information.servicename
+
+The following code shows the basics of connecting to an Oracle database and opening a connection.
+
+```vb
+Imports Oracle.ManagedDataAccess.Client
+
+Module Module1
+    Sub Main()
+        Dim connectionString As String = "User Id=USERDB;Password=PASSWORD;Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=XEPDB1)));"
+        Using connection As New OracleConnection(connectionString)
+            Try
+                connection.Open()
+                Console.WriteLine("Connection successful! ")
+            Catch ex As Exception
+                Console.WriteLine("Connection Error: " & ex.Message)
+            End Try
+        End Using
+    End Sub
+End Module
+```

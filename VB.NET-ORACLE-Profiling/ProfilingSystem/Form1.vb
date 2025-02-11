@@ -1,6 +1,14 @@
 ﻿Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'LoadData()
+        Dim dbConResult = TestDatabaseConnection()
+        If dbConResult.Success Then
+            MessageBox.Show(dbConResult.Message, "SUCCESS",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Else
+            MessageBox.Show(dbConResult.Message, "WARNING",
+                           MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
 
     Private Sub btnLoad_Click(sender As Object, e As EventArgs) Handles btnLoad.Click
