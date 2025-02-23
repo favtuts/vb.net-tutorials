@@ -1,0 +1,27 @@
+/**** Create Table StudentInfo for ProfilingSystem ***/
+CREATE TABLE StudentInfo (
+    Id            NUMBER(10)            NOT NULL,
+    LastName      NVARCHAR2 (20)  NULL,
+    FirstName     NVARCHAR2 (20)  NULL,
+    MiddleName    NVARCHAR2 (20)  NULL,
+    Gender        NVARCHAR2 (7)   NULL,
+    Birthday      TIMESTAMP(3)       NULL,
+    ContactNumber NVARCHAR2 (11)  NULL,
+    Address       NVARCHAR2 (200) NULL,
+    Course        NVARCHAR2 (100) NULL,
+    Year          NVARCHAR2 (50)  NULL,
+    Section       NVARCHAR2 (50)  NULL,
+    SchoolAddress NVARCHAR2 (200) NULL,
+    Created       TIMESTAMP(3)       NULL,
+    PRIMARY KEY (Id)
+);
+
+-- Generate ID using sequence and trigger
+CREATE SEQUENCE StudentInfo_seq START WITH 1 INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER StudentInfo_seq_tr
+ BEFORE INSERT ON StudentInfo FOR EACH ROW
+ WHEN (NEW.Id IS NULL)
+BEGIN
+ SELECT StudentInfo_seq.NEXTVAL INTO :NEW.Id FROM DUAL;
+END;

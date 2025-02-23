@@ -4,6 +4,8 @@
 This article demo CRUD for Studen Profile information based on VB.NET and SQL Server database.
 We will base on this and make the changes for using Oracle Database
 
+You can check [Oracle database setup on Docker](./Oracle-Docker.md) for more details information
+
 # Prepare StudentInfo table on Oracle database
 
 We already have the script file `Scripts.txt` to create table StudentInfo on MS SQL Server database
@@ -114,4 +116,56 @@ Module Module1
         End Using
     End Sub
 End Module
+```
+
+# Add new project for ODBC Testing
+
+Clone new project `ProfillingSystemODBC` from the original project `ProfilingSystem` (using ODP.NET)
+
+
+.NET 8.0 require to install `System.Data.Odbc` via Nuget
+
+![Install_Odbc_Nuget](./images/PS-04-install-Odbc-Nuget.png)
+
+
+After Odbc library installed, you just need to import the namespace:
+```Vb
+Imports System.Data.Odbc
+```
+
+Connect to database using ODBC
+1. Example of connection using DSN (if set up in ODBC Administrator):
+```vb
+Imports System.Data.Odbc
+
+Public Class Form1
+    Private Sub btnConnect_Click(sender As Object, e As EventArgs) Handles btnConnect.Click
+        Dim connectionString As String = "DSN=OracleDSN;Uid=myUser;Pwd=myPassword;"
+        
+        Try
+            Using conn As New OdbcConnection(connectionString)
+                conn.Open()
+                MessageBox.Show("Kết nối thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Lỗi kết nối: " & ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+End Class
+```
+
+Real Example:
+```vb
+Dim connectionString As String = "DSN=XE21DNS;Uid=USERDB;Pwd=PASSWORD;"
+```
+
+2. Or connect directly without DSN:
+```vb
+Dim connectionString As String = "Driver={Oracle in OraDB12Home1};DBQ=yourTNS;Uid=myUser;Pwd=myPassword;"
+```
+Note: `OraDB12Home1` is the driver name you can find in the ODBC Data Source Administrator.
+
+Real Example:
+```vb
+Dim connectionString As String = "Driver={Oracle in instantclient_23_7};DBQ=XE21;Uid=USERDB;Pwd=PASSWORD;"
 ```
